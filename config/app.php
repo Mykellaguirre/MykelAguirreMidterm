@@ -192,7 +192,7 @@ return [
     */
 
     'aliases' => Facade::defaultAliases()->merge([
-        'Calendar' => MaddHatter\LaravelFullcalendar\Facades\Calendar::class,
+        
         // ...
     ])->toArray(),
 

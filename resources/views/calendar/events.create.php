@@ -10,8 +10,8 @@
 <form method="post" action="{{ route('calenderevent.store') }}" >
     @csrf
     <x-adminlte-input name="title" label="Title" />
-    <x-adminlte-input name="start" type="datetime-local" label="Start" />
-    <x-adminlte-input name="end" type="datetime-local" label="Finish" />
+    <x-adminlte-input name="Begin" type="datetime-local" label="Start" />
+    <x-adminlte-input name="Finish" type="datetime-local" label="Finish" />
     <x-adminlte-button type="Submit" label="Submit" />
 </form>
 @stop
