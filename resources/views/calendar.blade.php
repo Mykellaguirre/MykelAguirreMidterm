@@ -14,9 +14,10 @@
         <div id="calendar" class="fc fc-media-screen fc-direction-ltr fc-theme-bootstrap">
         </div>
       </div>
-    </div>
+    </div> 
   </div>
 </div>
+<a href="{{ route('eventsfeed.create') }} " class="btn btn-primary" >Create</a>
 @stop
 
 @section('css')
@@ -30,6 +31,7 @@ $( document ).ready(function() {
     var calendar = new FullCalendar.Calendar($('#calendar')[0], {
       initialView: 'dayGridMonth',
       events: '/events-feed'
+      return json_encode( compact('events')['events'] );
     });
     calendar.render();
 })

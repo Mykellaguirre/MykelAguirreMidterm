@@ -62,6 +62,8 @@ Route::get('/db-migrate', function () {
     echo Artisan::output();
 });
 
+
+
 Route::resource('/todos', TodoController::class);
 Route::resource('/calendar', CalendarController::class);
 
