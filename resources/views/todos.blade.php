@@ -16,7 +16,8 @@
         </tr>
       </thead>
       <tbody>
-
+        $todo
+        $todos
         @foreach($todos AS $todo)
         <tr>
           <td>{{ $todo->id }}</td>
