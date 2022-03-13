@@ -10,14 +10,14 @@ class CalendarController extends Controller
 
     public function index()
     {
-        $todos = Todo::all();
-        return view('calendar',compact('calendar'));
+        
+        return view('calendar');
     }
 
 
     public function create()
     {
-        return view('calendar.create');
+        return view('eventsfeed.create');
     }
 
 
@@ -30,7 +30,7 @@ class CalendarController extends Controller
 
         ]);
 
-        $todo = Todo::create([ 
+        $calendar = calendar::create([ 
              'title' => $request->title, 
              'start_at' =>$request->date('start_at'),
              'end_at' => $request->date('end_at'),
@@ -41,8 +41,8 @@ class CalendarController extends Controller
 
     public function show($id)
     {
-        $todo= Todo::find($id); 
-        return view('calendar.show',compact('calendar'));
+        $eventsfeed = Event::find($id);
+        return view('eventsfeed.show',compact('calendar'));
     }
 
 

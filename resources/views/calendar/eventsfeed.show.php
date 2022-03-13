@@ -3,10 +3,10 @@
 @section('title', 'To Do List')
 
 @section('content_header')
-    <h1>To Do's</h1>
+    <h1>Events</h1>
 @stop
 
 @section('content')
-  <h2>{{ $todo->title; }}</h2>
-  <div><p>{{ $todo->progress; }}% finished</p></div>
+  <h2>{{ $calendar->title; }}</h2>
+  <div><p>{{ $calendar->start_at; }}% finished</p></div>
 @stop
