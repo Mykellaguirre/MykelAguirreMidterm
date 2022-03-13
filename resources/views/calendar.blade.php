@@ -17,7 +17,7 @@
     </div> 
   </div>
 </div>
-<a href="{{ route('eventsfeed.create') }} " class="btn btn-primary" >Create</a>
+<a href="{{ route('events.create') }} " class="btn btn-primary" >Create</a>
 @stop
 
 @section('css')
