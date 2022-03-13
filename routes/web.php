@@ -65,8 +65,9 @@ Route::get('/db-migrate', function () {
 
 
 Route::resource('/todos', TodoController::class);
-Route::resource('/calendar', CalendarController::class);
-Route::get('calendar',[CalendarController::class, 'index']);
+
+
+Route::get('calendar', 'App\Http\Controllers\CalendarController@calendar');
 
 
 
