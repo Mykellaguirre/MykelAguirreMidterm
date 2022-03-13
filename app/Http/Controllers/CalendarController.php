@@ -10,7 +10,7 @@ class CalendarController extends Controller
 
     public function index()
     {
-        $event = Calendar::all();
+        $event = CalendarController::latest()->get();
         return response()->json($event);
         return view('calendar');
     }
