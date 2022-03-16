@@ -242,83 +242,37 @@ return [
             'text' => 'search',
         ],
 [
-        'text' => 'To Do\'s',
-        'url'  => 'todos',
-        'icon' => 'fas fa-fw fa-file',
+        'text' => 'Customers',
+        'url'  => 'customers',
+        'icon' => 'far fa-id-badge',
     ],
     [         
-        'text' => 'Calendar',
-        'url'  => 'calendar',
-        'icon' => 'fas fa-fw fa-calendar-alt',
+        'text' => 'Manufacturer',
+        'url'  => 'manufacturer',
+        'icon' => 'far fa-sun',
     ],
 [         
-        'text' => 'Board',
-        'url'  => 'board',
-        'icon' => 'far fa-newspaper',
+        'text' => 'Tech-Category',
+        'url'  => 'tech-category',
+        'icon' => 'far fa-hdd',
     ],
-        [
-            'text' => 'blog',
-            'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
-        ],
+    [         
+        'text' => 'Create Invoice',
+        'url'  => 'create-invoice',
+        'icon' => 'far fa-folder',
+    ],
+    [         
+        'text' => 'View info',
+        'url'  => 'view-info',
+        'icon' => 'far fa-square',
+    ],
+   
+        
     
       
     
     
-        [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
-            'submenu' => [
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-                [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-            ],
-        ],
-        ['header' => 'labels'],
-        [
-            'text'       => 'important',
-            'icon_color' => 'red',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'information',
-            'icon_color' => 'cyan',
-            'url'        => '#',
-        ],
+       
     ],
 
     /*

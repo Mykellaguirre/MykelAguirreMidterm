@@ -15,21 +15,26 @@ use App\Http\Controllers\CalendarController;
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('todos', function () {
-    return view('todos');
+Route::get('manufacturer', function () {
+    return view('manufacturer');
+});
+Route::get('view-info', function () {
+    return view('view-info');
+});
+Route::get('tech-category', function () {
+    return view('tech-category');
+});
+Route::get('create-invoice', function () {
+    return view('create-invoice');
+});
+Route::get('customers', function () {
+    return view('customers');
 });
 
-Route::get('calendar', function () {
-    return view('calendar');
-});
-
-Route::get('board', function () {
-    return view('board');
-});
 
 Route::fallback(function () {
     return view('what-ever');
