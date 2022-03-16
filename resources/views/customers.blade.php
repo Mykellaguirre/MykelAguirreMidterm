@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Customers')
+@section('title', 'Customer List')
 
 @section('content_header')
-    <h1>Customers</h1>
+    <h1>Customer List</h1>
 @stop
 
 @section('content')
@@ -12,26 +12,25 @@
     <table id="table" class="table table-bordered">
       <thead>
         <tr>
-          <th style="width: 10px">#</th><th>Task</th><th>Progress</th><th style="width: 40px">Label</th>
+          <th style="width: 10px">#</th><th>Customer Name</th><th>Email</th></th>Phone Number</th><th style="width: 40px">Action</th>
         </tr>
       </thead>
       <tbody>
+
+        @foreach($customers AS $customers)
         <tr>
-          <td>1.</td>
-          <td>Update software</td>
-          <td><div class="progress progress-xs"><div class="progress-bar progress-bar-danger" style="width: 55%"></div></div></td>
-          <td><span class="badge bg-danger">55%</span></td>
+          <td>{{ $customers->Customer_Name }}</td>
+          <td>{{ $customers->Email }}</td>
+          <td>{{ $customers->Phone_Number }}</td>
+          <td><a class="btn btn-default btn-sm" href="{{ route('todos.show',['todo'=>$todo->id]) }}">View</a></td>
         </tr>
-        <tr>
-          <td>2.</td>
-          <td>Clean database</td>
-          <td><div class="progress progress-xs"><div class="progress-bar bg-warning" style="width: 70%"></div></div></td>
-          <td><span class="badge bg-warning">70%</span></td>
-        </tr>
+        @endforeach
+
       </tbody>
     </table>
   </div>
 </div>
+<a href="{{ route('customers.create') }} " class="btn btn-primary" >Create</a>
 @stop
 
 @section('js')

@@ -1,9 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TodoController;
-use App\Http\Controllers\CalendarController;
 
+use App\Http\Controllers\CustomersController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,6 +13,7 @@ use App\Http\Controllers\CalendarController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 
 
 Route::get('/', function () {
@@ -42,6 +42,13 @@ Route::get('/db-test', function () {
           echo 'None';
     }
 });
+
+Route::get('/db-migrate', function () {
+    Artisan::call('migrate');
+    echo Artisan::output();
+});
+
+Route::resource('/customers', CustomersController::class);
 
 
 Route::fallback(function () {
