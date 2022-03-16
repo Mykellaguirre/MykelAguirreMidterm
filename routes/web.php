@@ -35,6 +35,14 @@ Route::get('customers', function () {
     return view('customers');
 });
 
+Route::get('/db-test', function () {
+    try {         
+         echo \DB::connection()->getDatabaseName();     
+    } catch (\Exception $e) {
+          echo 'None';
+    }
+});
+
 
 Route::fallback(function () {
     return view('what-ever');
