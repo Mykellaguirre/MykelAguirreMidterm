@@ -44,7 +44,7 @@ class CustomersController extends Controller
             'Email' => 'required',
             'Phone_Number' => 'required',
        ]);
-       $todo = Todo::create([ 
+       $customers = customers::create([ 
         'Customer_Name' => $request->Customer_Name, 
         'Email' => $request->Email, 
         'Phone_Number' => $request->Phone_Number, 
@@ -63,7 +63,7 @@ class CustomersController extends Controller
      */
     public function show(customers $customers)
     {
-        $customers= Todo::find($id); 
+        $customers= customers::find($id); 
         return view('customers.show',compact('customers'));
         //
     }
