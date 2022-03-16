@@ -54,13 +54,6 @@ class CustomersController extends Controller
       
         //
     }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\customers  $customers
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
         $customers= customers::find($id); 
@@ -68,12 +61,7 @@ class CustomersController extends Controller
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\customers  $customers
-     * @return \Illuminate\Http\Response
-     */
+
     public function edit(customers $customers)
     {
         //

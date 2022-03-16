@@ -22,7 +22,7 @@
           <td>{{ $customers->Customer_Name }}</td>
           <td>{{ $customers->Email }}</td>
           <td>{{ $customers->Phone_Number }}</td>
-          <td><a class="btn btn-default btn-sm" href="{{ route('todos.show',['todo'=>$todo->id]) }}">View</a></td>
+          <td><a class="btn btn-default btn-sm" href="{{ route('customers.show',['customers'=>$customers->id]) }}">View</a></td>
         </tr>
         @endforeach
 
