@@ -50,7 +50,7 @@ class CustomersController extends Controller
         'Phone_Number' => $request->Phone_Number, 
    ]);
 
-   return $this->index();
+   return view('customers');
       
         //
     }
