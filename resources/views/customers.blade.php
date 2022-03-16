@@ -17,11 +17,11 @@
       </thead>
       <tbody>
 
-        @foreach($customers AS $customers)
+        @foreach($customers AS $customer)
         <tr>
-          <td>{{ $customers->Customer_Name }}</td>
-          <td>{{ $customers->Email }}</td>
-          <td>{{ $customers->Phone_Number }}</td>
+          <td>{{ $customer->Customer_Name }}</td>
+          <td>{{ $customer->Email }}</td>
+          <td>{{ $customer->Phone_Number }}</td>
           <td><a class="btn btn-default btn-sm" href="{{ route('customers.show',['customers'=>$customers->id]) }}">View</a></td>
         </tr>
         @endforeach

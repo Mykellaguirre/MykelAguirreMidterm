@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\customers;
+use App\Models\Customer;
 use Illuminate\Http\Request;
 
 
@@ -15,7 +15,7 @@ class CustomersController extends Controller
      */
     public function index()
     {
-        $customers = Customers::all();
+        $customers = Customer::all();
         return view('customers',compact('customers'));
         //
     }
@@ -44,7 +44,7 @@ class CustomersController extends Controller
             'Email' => 'required',
             'Phone_Number' => 'required',
        ]);
-       $customers = customers::create([ 
+       $customers = Customer::create([ 
         'Customer_Name' => $request->Customer_Name, 
         'Email' => $request->Email, 
         'Phone_Number' => $request->Phone_Number, 
@@ -56,13 +56,13 @@ class CustomersController extends Controller
     }
     public function show($id)
     {
-        $customers= customers::find($id); 
-        return view('customers.show',compact('customers'));
+        $customers= Customer::find($id); 
+        return view('customers.show',compact('customer'));
         //
     }
 
 
-    public function edit(customers $customers)
+    public function edit($id)
     {
         //
     }
@@ -74,7 +74,7 @@ class CustomersController extends Controller
      * @param  \App\Models\customers  $customers
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, customers $customers)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -85,7 +85,7 @@ class CustomersController extends Controller
      * @param  \App\Models\customers  $customers
      * @return \Illuminate\Http\Response
      */
-    public function destroy(customers $customers)
+    public function destroy($id)
     {
         //
     }
