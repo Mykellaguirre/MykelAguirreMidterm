@@ -10,7 +10,7 @@
 <form method="post" action="{{ route('notes.store') }}" >
     @csrf
     <x-adminlte-input name="note" label="Note" />
- ess" />
+ 
     <x-adminlte-button type="Submit" label="Submit" />
 </form>
 @stop
