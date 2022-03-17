@@ -54,7 +54,7 @@ Route::fallback(function () {
 });
 
 
-Route::resource('/manufacturer', ManufacturerController::class);
+Route::resource('/manufacturers', ManufacturerController::class);
 
 
 
