@@ -9,7 +9,7 @@ class ManufacturerController extends Controller
     public function index()
     {
     $manufacturers = Manufacturer::all();
-    return view ('manufacturers',['manufacturers'=> $manufacturers,]);
+    return view('manufacturers',compact('manufacturers'));
     }
     //
 
