@@ -244,17 +244,17 @@ return [
 
     [         
         'text' => 'Manufacturer',
-        'url'  => 'manufacturer',
+        'url'  => 'manufacturers',
         'icon' => 'far fa-sun',
     ],
 [         
         'text' => 'Type',
-        'url'  => 'type',
+        'url'  => 'types',
         'icon' => 'far fa-hdd',
     ],
     [         
         'text' => 'Notes',
-        'url'  => 'note',
+        'url'  => 'notes',
         'icon' => 'far fa-folder',
     ],
     [         
