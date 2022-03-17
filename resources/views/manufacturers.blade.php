@@ -12,12 +12,11 @@
     <table id="table" class="table table-bordered">
       <thead>
         <tr>
-          <th style="width: 10px">#</th><th>Manufacturer</th><th>Sales Info</th><th> Tech Support</th><th style="width: 20px"></th>
-        </tr>
+          <th style="width: 10px">#</th>Manufacturer</th>Sales Info</th><th> Tech Support</th><th style="width: 20px"></th>
+       
       </thead>
       <tbody>
-        $manufacturer
-        $manufacturers
+       
         @foreach($manufacturers AS $manufacturer)
         <tr>
           <td>{{ $manufacturer->id }}<td>
