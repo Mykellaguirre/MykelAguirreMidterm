@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('purchases', function (Blueprint $table) {
             $table->id();
             $table->string('quantity');
-            $table->date('created_at');
+            $table->string('date');
             $table->string('employee');
             $table->timestamps();
         });
