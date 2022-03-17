@@ -55,9 +55,7 @@ Route::fallback(function () {
 
 
 Route::resource('/manufacturer', ManufacturerController::class);
-Route::get('/manufacturers', 'ManufacturerController@index');
 
-Route::get('/manufacturers/{id}', 'ManufacturerController@show');
 
 
 
