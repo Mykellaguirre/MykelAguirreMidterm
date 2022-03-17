@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ManufacturerController;
 
-use App\Http\Controllers\CustomersController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,18 +22,16 @@ Route::get('/', function () {
 Route::get('manufacturer', function () {
     return view('manufacturer');
 });
-Route::get('view-info', function () {
-    return view('view-info');
+Route::get('note', function () {
+    return view('note');
 });
-Route::get('tech-category', function () {
-    return view('tech-category');
+Route::get('type', function () {
+    return view('type');
 });
-Route::get('create-invoice', function () {
-    return view('create-invoice');
+Route::get('purchase', function () {
+    return view('purchase');
 });
-Route::get('customers', function () {
-    return view('customers');
-});
+
 
 Route::get('/db-test', function () {
     try {         
@@ -56,7 +54,7 @@ Route::fallback(function () {
 });
 
 
-
+Route::resource('/manufacturer', ManufacturerController::class);
 Route::get('/manufacturers', 'ManufacturerController@index');
 
 Route::get('/manufacturers/{id}', 'ManufacturerController@show');
