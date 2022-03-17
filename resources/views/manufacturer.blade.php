@@ -17,12 +17,14 @@
       </thead>
       <tbody>
 
-        @foreach($todos AS $todo)
+        @foreach($manufacturers AS $manufacturer)
         <tr>
-          <td>{{ $todo->id }}</td>
-          <td>{{ $todo->title }}</td>
-          <td><div class="progress progress-xs"><div class="progress-bar progress-bar-danger" style="width: {{ $todo->progress }}%"></div></div></td>
-          <td><a class="btn btn-default btn-sm" href="{{ route('todos.show',['todo'=>$todo->id]) }}">View</a></td>
+          <td>{{ $manufacturer->id }}</td>
+          <td>{{ $manufacturer->man_Name }}</td>
+          <td>{{ $manufacturer->sales_Info }}</td>
+          <td>{{ $manufacturer->tech_Support }}</td>
+          
+          <td><a class="btn btn-default btn-sm" href="{{ route('manufacturer.show',['manufacturer'=>$manufacturer->id]) }}">View</a></td>
         </tr>
         @endforeach
 
@@ -30,7 +32,7 @@
     </table>
   </div>
 </div>
-<a href="{{ route('todos.create') }} " class="btn btn-primary" >Create</a>
+<a href="{{ route('manufacturer.create') }} " class="btn btn-primary" >Create</a>
 @stop
 
 @section('js')
