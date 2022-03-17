@@ -24,7 +24,7 @@
           <td>{{ $manufacturer->sales_Info }}</td>
           <td>{{ $manufacturer->tech_Support }}</td>
           
-          <td><a class="btn btn-default btn-sm" href="{{ route('manufacturer.show',['manufacturer'=>$manufacturer->id]) }}">View</a></td>
+          <td><a class="btn btn-default btn-sm" href="{{ route('manufacturers.show',['manufacturer'=>$manufacturer->id]) }}">View</a></td>
         </tr>
         @endforeach
 
@@ -32,7 +32,7 @@
     </table>
   </div>
 </div>
-<a href="{{ route('manufacturer.create') }} " class="btn btn-primary" >Create</a>
+<a href="{{ route('manufacturers.create') }} " class="btn btn-primary" >Create</a>
 @stop
 
 @section('js')
