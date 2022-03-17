@@ -16,6 +16,8 @@
         </tr>
       </thead>
       <tbody>
+        $notes
+        $note
 
         @foreach($notes AS $note)
         <tr>

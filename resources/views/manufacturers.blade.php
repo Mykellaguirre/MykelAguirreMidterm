@@ -16,6 +16,8 @@
         </tr>
       </thead>
       <tbody>
+        $manufacturer
+        $manufacturers
         @foreach($manufacturers AS $manufacturer)
         <tr>
           <td>{{ $manufacturer->man_Name }} - {{ $manufacturer->sales_Info }} - {{ $manufacturer->tech_Support }}
