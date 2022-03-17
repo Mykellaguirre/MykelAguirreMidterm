@@ -242,8 +242,8 @@ return [
             'text' => 'search',
         ],
 [
-        'text' => 'Customers',
-        'url'  => 'customers',
+        'text' => 'Customer',
+        'url'  => 'customer',
         'icon' => 'far fa-id-badge',
     ],
     [         
@@ -253,12 +253,12 @@ return [
     ],
 [         
         'text' => 'Tech-Category',
-        'url'  => 'tech-category',
+        'url'  => 'tech',
         'icon' => 'far fa-hdd',
     ],
     [         
         'text' => 'Create Invoice',
-        'url'  => 'create-invoice',
+        'url'  => 'invoice',
         'icon' => 'far fa-folder',
     ],
     [         
