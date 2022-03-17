@@ -48,12 +48,22 @@ Route::get('/db-migrate', function () {
     echo Artisan::output();
 });
 
-Route::resource('/customers', CustomersController::class);
+
 
 
 Route::fallback(function () {
     return view('what-ever');
 });
+
+
+
+Route::get('/manufacturers', 'ManufacturerController@index');
+
+Route::get('/manufacturers/{id}', 'ManufacturerController@show');
+
+
+
+
 
 
 

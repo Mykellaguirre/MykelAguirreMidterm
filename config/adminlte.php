@@ -241,29 +241,25 @@ return [
             'type' => 'sidebar-menu-search',
             'text' => 'search',
         ],
-[
-        'text' => 'Customer',
-        'url'  => 'customer',
-        'icon' => 'far fa-id-badge',
-    ],
+
     [         
         'text' => 'Manufacturer',
         'url'  => 'manufacturer',
         'icon' => 'far fa-sun',
     ],
 [         
-        'text' => 'Tech-Category',
-        'url'  => 'tech',
+        'text' => 'Type',
+        'url'  => 'type',
         'icon' => 'far fa-hdd',
     ],
     [         
-        'text' => 'Create Invoice',
-        'url'  => 'invoice',
+        'text' => 'Notes',
+        'url'  => 'note',
         'icon' => 'far fa-folder',
     ],
     [         
         'text' => 'View info',
-        'url'  => 'view-info',
+        'url'  => 'display',
         'icon' => 'far fa-square',
     ],
    
