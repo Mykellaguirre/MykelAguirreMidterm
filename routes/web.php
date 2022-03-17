@@ -19,11 +19,11 @@ use App\Http\Controllers\ManufacturerController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('manufacturer', function () {
+Route::get('manufacturers', function () {
     return view('manufacturers');
 });
-Route::get('note', function () {
-    return view('note');
+Route::get('notes', function () {
+    return view('notes');
 });
 Route::get('type', function () {
     return view('type');
