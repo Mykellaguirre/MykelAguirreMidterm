@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ManufacturerController;
+use App\Http\Controllers\NoteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,7 +55,8 @@ Route::fallback(function () {
 });
 
 
-Route::resource('/manufacturers', ManufacturerController::class);
+Route::resource('/manufacturer', ManufacturerController::class);
+Route::resource('/note', NoteController::class);
 
 
 
