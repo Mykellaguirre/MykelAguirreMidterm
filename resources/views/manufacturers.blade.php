@@ -17,16 +17,7 @@
       </thead>
       <tbody>
 
-        @foreach($manufacturers AS $manufacturer)
-        <tr>
-          <td>{{ $manufacturer->id }}</td>
-          <td>{{ $manufacturer->man_Name }}</td>
-          <td>{{ $manufacturer->sales_Info }}</td>
-          <td>{{ $manufacturer->tech_Support }}</td>
-          
-          <td><a class="btn btn-default btn-sm" href="{{ route('manufacturers.show',['manufacturer'=>$manufacturer->id]) }}">View</a></td>
-        </tr>
-        @endforeach
+      
 
       </tbody>
     </table>
