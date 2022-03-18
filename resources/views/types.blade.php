@@ -21,8 +21,8 @@
        
         @foreach($types AS $type)
         <tr>
-          <th>{{ type->id }}</th> 
-          <th>{{ type->category }}</th>
+          <th>{{ types->id }}</th> <br>
+          <th>{{ types->category }}</th>
    
           
           <td><a class="btn btn-default btn-sm" href="{{ route('types.show',['type'=>$type->id]) }}">View</a></td>
