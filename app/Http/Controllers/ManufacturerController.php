@@ -57,29 +57,19 @@ class ManufacturerController extends Controller
 
     public function update(Request $request, $id)
     {
-        $data = $request->except('_method','_token','submit');
-
-        $validator = Validator::make($request->all(), [
-           'man_Name' => 'required|string|min:3',
-           'sales_Info' => 'required|string|min:3',
-           'tech_Support' => 'required|string|min:3',
-
-        ]);
-  
-        if ($validator->fails()) {
-           return redirect()->Back()->withInput()->withErrors($validator);
-        }
+        $request->validate([
+            'man_Name'=>'required',
+            'sales_Info'=>'required',
+            'tech_Support'=>'required|max:10|regex:/^-?[0-9]+(?:\.[0-9]{1,2})?$/'
+        ]); 
         $manufacturer = Manufacturer::find($id);
-  
-        if($manufacturer->update($data)){
-  
-           Session::flash('message', 'Update successfully!');
-           Session::flash('alert-class', 'alert-success');
-           return redirect()->route('manufacturers');
-        }else{
-           Session::flash('message', 'Data not updated!');
-           Session::flash('alert-class', 'alert-danger');
-        }
+        // Getting values from the blade template form
+        $manufacturer->man_Name =  $request->get('man_Name');
+        $manufacturer->sales_Info = $request->get('sales_Info');
+        $manufacturer->tech_Support = $request->get('tech_Support');
+        $manufacturer->save();
+ 
+        return redirect('/manufacturers')->with('success', 'Stock updated.'); // -> resources/views/stocks/index.blade.php
   
         return Back()->withInput();
         //
