@@ -91,7 +91,7 @@ class ManufacturerController extends Controller
         $manufacturer = Manufacturer::find($id);
         $manufacturer->delete(); // Easy right?
  
-        return redirect('/manufacturer')->with('success', 'Stock removed.');
+        return redirect('/manufacturers')->with('success', 'Stock removed.');
         //
     }
 }
