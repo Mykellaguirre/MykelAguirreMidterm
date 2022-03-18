@@ -60,7 +60,7 @@ class ManufacturerController extends Controller
         $request->validate([
             'man_Name'=>'required',
             'sales_Info'=>'required',
-            'tech_Support'=>'required|max:10|regex:/^-?[0-9]+(?:\.[0-9]{1,2})?$/'
+            'tech_Support'=>'required'
         ]); 
         $manufacturer = Manufacturer::find($id);
         // Getting values from the blade template form
@@ -69,7 +69,7 @@ class ManufacturerController extends Controller
         $manufacturer->tech_Support = $request->get('tech_Support');
         $manufacturer->save();
  
-        return redirect('/manufacturers')->with('success', 'Stock updated.'); // -> resources/views/stocks/index.blade.php
+        return redirect('/manufacturers')->with('success', 'Stock updated.'); 
   
         return Back()->withInput();
         //
