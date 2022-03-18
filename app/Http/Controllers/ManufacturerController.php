@@ -88,11 +88,10 @@ class ManufacturerController extends Controller
 
     public function destroy($id)
     {
-        Manufacturer::destroy($id);
-
-        Session::flash('message', 'Delete successfully!');
-        Session::flash('alert-class', 'alert-success');
-        return redirect()->route('manufacturers');
+        $manufacturer = Manufacturer::find($id);
+        $manufacturer->delete(); // Easy right?
+ 
+        return redirect('/manufacturer')->with('success', 'Stock removed.');
         //
     }
 }
