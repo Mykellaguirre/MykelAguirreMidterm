@@ -7,12 +7,25 @@
 @stop
 
 @section('content')
-<form method="post" action="{{ route('manufacturers.store') }}" >
-    @csrf
-    <x-adminlte-input name="man_Name" label="Manufacturer" />
-    <x-adminlte-input name="sales_Info" label="Sales Email" />
-    <x-adminlte-input name="tech_Support" label="Tech Support email" />
-    
-    <x-adminlte-button type="Submit" label="Submit" />
-</form>
+<form method="post" action="{{ route('manufacturers.store') }}">
+          @csrf
+          <div class="form-group">    
+              <label for="man_Name">Manufacturer:*</label>
+              <input type="text" class="form-control" name="man_Name"/>
+          </div>
+ 
+          <div class="form-group">
+              <label for="sales_Info">Sales Info:*</label>
+              <input type="text" class="form-control" name="sales_Info"/>
+          </div>
+ 
+          <div class="form-group">
+              <label for="tech_Support">Tech Support:</label>
+              <input type="text" class="form-control" name="tech_Support"/>
+          </div>
+          <button type="submit" class="btn btn-primary">Add Manufacturer</button>
+      </form>
+  </div>
+</div>
+</div>
 @stop
