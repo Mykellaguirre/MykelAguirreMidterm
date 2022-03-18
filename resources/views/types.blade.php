@@ -25,7 +25,14 @@
           <th>{{ type->category }}</th>
    
           
-          <td><a class="btn btn-default btn-sm" href="{{ route('manufacturers.show',['manufacturer'=>$manufacturer->id]) }}">View</a></td>
+          <td><a class="btn btn-default btn-sm" href="{{ route('types.show',['type'=>$type->id]) }}">View</a></td>
+          <td><a href="{{ route('types.edit',$type->id)}}" class="btn btn-primary">Edit</a></td>
+            <td>
+          <form action="{{ route('types.destroy', $type->id)}}" method="post">
+                  @csrf
+                  @method('DELETE')
+                  <button class="btn btn-danger" type="submit">Delete</button>
+                  </form>
         </tr>
         @endforeach
 

@@ -45,18 +45,38 @@ class TypeController extends Controller
 
     public function edit($id)
     {
+        $type = Type::find($id);
+
+        return view('types.edit')->with('type',$note);
         //
     }
 
 
     public function update(Request $request, $id)
     {
+        $request->validate([
+            'type'=>'required',
+           
+        ]); 
+        $type = Type::find($id);
+        // Getting values from the blade template form
+        $type->type =  $request->get('type');
+       
+        $type->save();
+ 
+        return redirect('/types')->with('success', 'employee updated.'); 
+  
+        return Back()->withInput();
         //
     }
 
 
     public function destroy($id)
     {
+        $type = Type::find($id);
+        $type->delete(); // Easy right?
+ 
+        return redirect('/types')->with('success', 'Stock removed.');
         //
     }
 }
