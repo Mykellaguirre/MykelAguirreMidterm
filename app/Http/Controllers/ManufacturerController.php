@@ -75,7 +75,7 @@ class ManufacturerController extends Controller
   
            Session::flash('message', 'Update successfully!');
            Session::flash('alert-class', 'alert-success');
-           return redirect()->route('subjects');
+           return redirect()->route('manufacturers');
         }else{
            Session::flash('message', 'Data not updated!');
            Session::flash('alert-class', 'alert-danger');
