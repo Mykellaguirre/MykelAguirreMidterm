@@ -29,9 +29,13 @@
           
           <td><a class="btn btn-default btn-sm" href="{{ route('manufacturers.show',['manufacturer'=>$manufacturer->id]) }}">View</a></td>
             <!-- Edit -->
-          <td><a href="{{ route('manufacturers.edit',[$manufacturer->id]) }}" class="btn btn-sm btn-info">Edit</a></td>
-                 <!-- Delete -->
-          <td><a href="{{ route('manufacturers.destroy',$manufacturer->id) }}" class="btn btn-sm btn-danger">Delete</a></td>
+            <td><a href="{{ route('manufacturers.edit',$manufacturer->id)}}" class="btn btn-primary">Edit</a></td>
+            <td>
+                <form action="{{ route('manufacturers.destroy', $manufacturer->id)}}" method="post">
+                  @csrf
+                  @method('DELETE')
+                  <button class="btn btn-danger" type="submit">Delete</button>
+                  </form>
         </tr>
         @endforeach
 
