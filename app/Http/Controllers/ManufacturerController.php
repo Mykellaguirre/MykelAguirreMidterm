@@ -48,18 +48,51 @@ class ManufacturerController extends Controller
 
     public function edit($id)
     {
+        $manufacturer = Manufacturer::find($id);
+
+        return view('manufacturers.edit')->with('manufacturer',$manufacturer);
         //
     }
 
 
     public function update(Request $request, $id)
     {
+        $data = $request->except('_method','_token','submit');
+
+        $validator = Validator::make($request->all(), [
+           'man_Name' => 'required|string|min:3',
+           'sales_Info' => 'required|string|min:3',
+           'tech_Support' => 'required|string|min:3',
+
+        ]);
+  
+        if ($validator->fails()) {
+           return redirect()->Back()->withInput()->withErrors($validator);
+        }
+        $manufacturer = Manufacturer::find($id);
+  
+        if($manufacturer->update($data)){
+  
+           Session::flash('message', 'Update successfully!');
+           Session::flash('alert-class', 'alert-success');
+           return redirect()->route('subjects');
+        }else{
+           Session::flash('message', 'Data not updated!');
+           Session::flash('alert-class', 'alert-danger');
+        }
+  
+        return Back()->withInput();
         //
     }
 
 
     public function destroy($id)
     {
+        Manufacturer::destroy($id);
+
+        Session::flash('message', 'Delete successfully!');
+        Session::flash('alert-class', 'alert-success');
+        return redirect()->route('manufacturers');
         //
     }
 }

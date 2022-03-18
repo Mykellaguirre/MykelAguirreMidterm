@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Manufacturer')
+@section('title', 'Type')
 
 @section('content_header')
-    <h1>Manufacturer</h1>
+    <h1>Type</h1>
 @stop
 
 @section('content')
@@ -12,26 +12,20 @@
     <table id="table" class="table table-bordered">
       <thead>
         <tr>
-        <th style="width: 10px">#</th><th>Manufacturer</th><th>Sales</th><th>Tech Support</th>
+        <th style="width: 10px">#</th><th>Category</th>
       </tr>
         
         
       </thead>
       <tbody>
        
-        @foreach($manufacturers AS $manufacturer)
+        @foreach($types AS $type)
         <tr>
-          <th>{{ $manufacturer->id }}</th> <br>
-          <th>{{ $manufacturer->man_Name }}</th> <br>
-          <th>{{ $manufacturer->sales_Info }}</th> <br>
-          <th>{{ $manufacturer->tech_Support }}</th>
-
+          <th>{{ type->id }}</th> <br>
+          <th>{{ type->category }}</th>
+   
           
           <td><a class="btn btn-default btn-sm" href="{{ route('manufacturers.show',['manufacturer'=>$manufacturer->id]) }}">View</a></td>
-            <!-- Edit -->
-          <td><a href="{{ route('manufacturers.edit',[$manufacturer->id]) }}" class="btn btn-sm btn-info">Edit</a></td>
-                 <!-- Delete -->
-          <td><a href="{{ route('manufacturers.delete',$manufacturer->id) }}" class="btn btn-sm btn-danger">Delete</a></td>
         </tr>
         @endforeach
 

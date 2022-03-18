@@ -253,13 +253,13 @@ return [
         'icon' => 'far fa-hdd',
     ],
     [         
-        'text' => 'Notes',
+        'text' => 'User',
         'url'  => 'notes',
         'icon' => 'far fa-folder',
     ],
     [         
-        'text' => 'View info',
-        'url'  => 'display',
+        'text' => 'Purchases',
+        'url'  => 'purchases',
         'icon' => 'far fa-square',
     ],
    

@@ -13,13 +13,13 @@ class Equipment extends Model
         return $this->belongsTo(Manufacturer::class);
     }
     function note() {
-        return $this->belongsTo(Note::class);
+        return $this->belongsTo(Note::class); //employee ID 
     }
     function purchase() {
         return $this->belongsTo(Purchase::class);
     }
     function type() {
-        return $this->belongsTo(Type::class);
+        return $this->belongsTo(Type::class); // category 
     }
     
 }

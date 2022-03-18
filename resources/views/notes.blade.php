@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Notes')
+@section('title', 'Employees')
 
 @section('content_header')
-    <h1>Notes</h1>
+    <h1>Employees</h1>
 @stop
 
 @section('content')
@@ -12,7 +12,7 @@
     <table id="table" class="table table-bordered">
       <thead>
         <tr>
-          <th style="width: 10px">#</th><th>note</th><th style="width: 40px">
+          <th style="width: 10px">#</th><th>Employee</th><th style="width: 40px">
         </tr>
       </thead>
       <tbody>
