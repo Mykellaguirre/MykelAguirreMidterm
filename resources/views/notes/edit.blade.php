@@ -7,8 +7,9 @@
 @stop
 
 @section('content')
-<form method="post" action="{{ route('notes.store') }}">
-          @csrf
+<form method="post" action="{{ route('notes.update', $note->id) }}">
+        @method('PATCH')
+        @csrf
           <div class="form-group">    
               <label for="note">Employee:*</label>
               <input type="text" class="form-control" name="note"/>

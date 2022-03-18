@@ -45,18 +45,38 @@ class NoteController extends Controller
 
     public function edit($id)
     {
+        $note = Note::find($id);
+
+        return view('notes.edit')->with('note',$note);
         //
     }
 
 
     public function update(Request $request, $id)
     {
+        $request->validate([
+            'note'=>'required',
+           
+        ]); 
+        $note = Note::find($id);
+        // Getting values from the blade template form
+        $note->note =  $request->get('note');
+       
+        $note->save();
+ 
+        return redirect('/notes')->with('success', 'employee updated.'); 
+  
+        return Back()->withInput();
         //
     }
 
 
     public function destroy($id)
     {
+        $note = Note::find($id);
+        $note->delete(); // Easy right?
+ 
+        return redirect('/notes')->with('success', 'Stock removed.');
         //
     }
 }
