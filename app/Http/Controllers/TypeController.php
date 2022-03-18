@@ -47,7 +47,7 @@ class TypeController extends Controller
     {
         $type = Type::find($id);
 
-        return view('types.edit')->with('type',$note);
+        return view('types.edit')->with('type',$type);
         //
     }
 
@@ -55,12 +55,12 @@ class TypeController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'type'=>'required',
+            'category'=>'required',
            
         ]); 
         $type = Type::find($id);
         // Getting values from the blade template form
-        $type->type =  $request->get('type');
+        $type->type =  $request->get('category');
        
         $type->save();
  

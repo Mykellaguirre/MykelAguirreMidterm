@@ -21,7 +21,7 @@
        
         @foreach($types AS $type)
         <tr>
-          <th>{{ type->id }}</th> <br>
+          <th>{{ type->id }}</th> 
           <th>{{ type->category }}</th>
    
           
