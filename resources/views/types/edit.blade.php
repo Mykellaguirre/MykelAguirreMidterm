@@ -11,7 +11,7 @@
         @method('PATCH')
         @csrf
           <div class="form-group">    
-              <label for="category">Employee:*</label>
+              <label for="category">Category:*</label>
               <input type="text" class="form-control" name="category"/>
           </div>
  
