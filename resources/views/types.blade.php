@@ -42,7 +42,7 @@
     </table>
   </div>
 </div>
-<a href="{{ route('type.create') }} " class="btn btn-primary" >Create</a>
+<a href="{{ route('types.create') }} " class="btn btn-primary" >Create</a>
 @stop
 
 @section('js')
