@@ -24,6 +24,13 @@
           <td>{{ $note->note }}</td>
           
           <td><a class="btn btn-default btn-sm" href="{{ route('notes.show',['note'=>$note->id]) }}">View</a></td>
+          <td><a href="{{ route('notes.edit',$note->id)}}" class="btn btn-primary">Edit</a></td>
+            <td>
+                <form action="{{ route('notes.destroy', $note->id)}}" method="post">
+                  @csrf
+                  @method('DELETE')
+                  <button class="btn btn-danger" type="submit">Delete</button>
+                  </form>
         </tr>
         @endforeach
 
