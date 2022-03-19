@@ -12,13 +12,13 @@ class Equipment extends Model
     protected $table = "equipments";
 
     function manufacturer() {
-        return $this->belongsTo(Manufacturer::class);// manufacturer
+        return $this->belongsTo(Manufacturer::class,'man_Name');// manufacturer
     }
     function note() {
-        return $this->belongsTo(Note::class); //employee ID 
+        return $this->belongsTo(Note::class,'note'); //employee ID 
     }
     function type() {
-        return $this->belongsTo(Type::class); // category 
+        return $this->belongsTo(Type::class,'category'); // category 
     }
     
 }
