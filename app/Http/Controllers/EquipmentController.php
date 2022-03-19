@@ -74,7 +74,7 @@ class EquipmentController extends Controller
             'type_id' => 'required',
             'specs' => 'required',
         ]); 
-        $manufacturer = Manufacturer::find($id);
+        $equipment = Equipment::find($id);
         // Getting values from the blade template form
         $equipment->manufacturer_id =  $request->get('manufacturer_id');
         $equipment->note_id = $request->get('note_id');
