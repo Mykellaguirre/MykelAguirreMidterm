@@ -17,10 +17,10 @@ return new class extends Migration
             $table->id();
             
             $table->foreignId('manufacturer_id');
-            $table->foreignId('purchase_id');
             $table->foreignId('note_id');
             $table->string('price');
             $table->string('name');
+            $table->string('invoice_Num');
             $table->foreignId('type_id');
             $table->mediumText('specs');
             $table->timestamps();
@@ -34,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('equipment');
+        Schema::dropIfExists('equipments');
     }
 };

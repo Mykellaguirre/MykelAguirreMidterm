@@ -10,13 +10,10 @@ class Equipment extends Model
     use HasFactory;
 
     function manufacturer() {
-        return $this->belongsTo(Manufacturer::class);
+        return $this->belongsTo(Manufacturer::class);// manufacturer
     }
     function note() {
         return $this->belongsTo(Note::class); //employee ID 
-    }
-    function purchase() {
-        return $this->belongsTo(Purchase::class);
     }
     function type() {
         return $this->belongsTo(Type::class); // category 
