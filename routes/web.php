@@ -31,8 +31,8 @@ Route::get('note', function () {
 Route::get('type', function () {
     return view('type');
 });
-Route::get('purchase', function () {
-    return view('purchase');
+Route::get('equipment', function () {
+    return view('equipments');
 });
 
 
