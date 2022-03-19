@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ManufacturerController;
 use App\Http\Controllers\NoteController;
 use App\Http\Controllers\TypeController;
+use App\Http\Controllers\EquipmentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -59,6 +60,7 @@ Route::fallback(function () {
 Route::resource('/manufacturers', ManufacturerController::class);
 Route::resource('/notes', NoteController::class);
 Route::resource('/types', TypeController::class);
+Route::resource('/equipments', EquipmentController::class);
 
 
 

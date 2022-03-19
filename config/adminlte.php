@@ -258,8 +258,8 @@ return [
         'icon' => 'far fa-folder',
     ],
     [         
-        'text' => 'Purchases',
-        'url'  => 'purchases',
+        'text' => 'Equipment',
+        'url'  => 'equipments',
         'icon' => 'far fa-square',
     ],
    
