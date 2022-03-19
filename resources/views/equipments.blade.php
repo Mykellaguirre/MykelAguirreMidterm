@@ -23,10 +23,10 @@
         <tr>
           <th>{{ $equipment->id }}</th> <br>
           <th>{{ $equipment->name }}</th> <br>
-          <th>{{ $equipment->note_id}}</th> <br>
+          <th>{{ $equipment->note_note}}</th> <br>
           <th>{{ $equipment->price }}</th> <br>
-          <th>{{ $equipment->manufacturer_id }}</th> <br>
-          <th>{{ $equipment->type_id }}</th> <br>
+          <th>{{ $equipment->manufacturer_man_Name }}</th> <br>
+          <th>{{ $equipment->type_category }}</th> <br>
           <th>{{ $equipment->invoice_Num }}</th> <br>
           <th>{{ $equipment->specs }}</th> 
 

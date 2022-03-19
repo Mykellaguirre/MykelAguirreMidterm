@@ -24,22 +24,22 @@ class EquipmentController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-             'manufacturer_id' => 'required',
-             'note_id' => 'required',
+             'manufacturer_man_Name' => 'required',
+             'note_note' => 'required',
              'price' => 'required',
              'name' => 'required',
              'invoice_Num' => 'required',
-             'type_id' => 'required',
+             'type_category' => 'required',
              'specs' => 'required',
         ]);
 
         $equipment = Equipment::create([ 
-             'manufacturer_id' => $request->manufacturer_id, 
-             'note_id' => $request->note_id, 
+             'manufacturer_man_Name' => $request->manufacturer_id, 
+             'note_note' => $request->note_id, 
              'price' => $request->price,
              'name' => $request->name, 
              'invoice_Num' => $request->invoice_Num, 
-             'type_id' => $request->type_id, 
+             'type_category' => $request->type_id, 
              'specs' => $request->specs,  
 
         ]);
@@ -66,22 +66,22 @@ class EquipmentController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'manufacturer_id' => 'required',
-            'note_id' => 'required',
+            'manufacturer_man_Name' => 'required',
+            'note_note' => 'required',
             'price' => 'required',
             'name' => 'required',
             'invoice_Num' => 'required',
-            'type_id' => 'required',
+            'type_category' => 'required',
             'specs' => 'required',
         ]); 
         $equipment = Equipment::find($id);
         // Getting values from the blade template form
-        $equipment->manufacturer_id =  $request->get('manufacturer_id');
-        $equipment->note_id = $request->get('note_id');
+        $equipment->manufacturer_man_Name =  $request->get('manufacturer_man_Name');
+        $equipment->note_note = $request->get('note_note');
         $equipment->price = $request->get('price');
         $equipment->name =  $request->get('name');
         $equipment->invoice_Num =  $request->get('invoice_Num');
-        $equipment->type_id =  $request->get('type_id');
+        $equipment->type_category =  $request->get('type_category');
         $equipment->specs =  $request->get('specs');
         
         $equipment->save();

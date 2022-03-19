@@ -15,8 +15,8 @@
           </div>
  
           <div class="form-group">
-              <label for="note_id">employee*</label>
-              <input type="text" class="form-control" name="note_id"/>
+              <label for="note_note">employee*</label>
+              <input type="text" class="form-control" name="note_note"/>
           </div>
  
           <div class="form-group">
@@ -25,13 +25,13 @@
           </div>
 
           <div class="form-group">
-              <label for="manufacturer_id">Manufacturer:</label>
-              <input type="text" class="form-control" name="manufacturer_id"/>
+              <label for="manufacturer_man_Name">Manufacturer:</label>
+              <input type="text" class="form-control" name="manufacturer_man_Name"/>
           </div>
 
           <div class="form-group">
-              <label for="type_id">Category:</label>
-              <input type="text" class="form-control" name="type_id"/>
+              <label for="type_category">Category:</label>
+              <input type="text" class="form-control" name="type_category"/>
           </div>
 
           <div class="form-group">

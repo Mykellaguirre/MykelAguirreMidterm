@@ -16,12 +16,12 @@ return new class extends Migration
         Schema::create('equipments', function (Blueprint $table) {
             $table->id();
             
-            $table->foreignId('manufacturer_id');
-            $table->foreignId('note_id');
+            $table->foreignId('manufacturer_man_Name');
+            $table->foreignId('note_note');
             $table->string('price');
             $table->string('name');
             $table->string('invoice_Num');
-            $table->foreignId('type_id');
+            $table->foreignId('type_category');
             $table->string('specs');
             $table->timestamps();
         });
