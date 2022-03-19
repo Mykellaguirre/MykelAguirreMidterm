@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('invoice_Num');
             $table->foreignId('type_id');
-            $table->mediumText('specs');
+            $table->string('specs');
             $table->timestamps();
         });
     }
