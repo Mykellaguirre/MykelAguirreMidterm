@@ -9,40 +9,42 @@
 @section('content')
 <form method="post" action="{{ route('equipments.store') }}">
           @csrf
-          <div class="form-group">    
-              <label for="name">Name:*</label>
-              <input type="text" class="form-control" name="name"/>
-          </div>
- 
-          <div class="form-group">
-              <label for="note_note">employee*</label>
-              <input type="text" class="form-control" name="note_note"/>
-          </div>
- 
-          <div class="form-group">
-              <label for="price">Price:</label>
-              <input type="text" class="form-control" name="price"/>
-          </div>
+          <div class="row">    
+              <x-adminlte-input name="name" label= "Name" class= "form-group"/>
 
-          <div class="form-group">
-              <label for="manufacturer_man_Name">Manufacturer:</label>
-              <input type="text" class="form-control" name="manufacturer_man_Name"/>
-          </div>
+              <x-adminlte-select name= "manufacturer_id" label = "Manufacturer" class= "form-group">
+              @foreach ($manufacturers as $manufacturers)
+                <option>{{ $manufacturers->man_Name}} </option>
+                @endforeach
+              </x-adminlte-select>
 
-          <div class="form-group">
-              <label for="type_category">Category:</label>
-              <input type="text" class="form-control" name="type_category"/>
-          </div>
+              <x-adminlte-input name="price" label="Price" class= "form-group"/>
+              <x-adminlte-input name="invoice_Num" label= "Invoice#" class= "form-group"/>
+              <x-adminlte-input name="processor" label= "Processor" class= "form-group"/>
+              <x-adminlte-input name="screen_Size" label= "Screen Size" class= "form-group"/>
+              <x-adminlte-input name="battery" label= "Battery Life" class= "form-group"/>
 
-          <div class="form-group">
-              <label for="invoice_Num">Invoice Number:</label>
-              <input type="text" class="form-control" name="invoice_Num"/>
-          </div>
+              <x-adminlte-select name= "type_id" label = "Category" class= "form-group">
+              @foreach ($types as $type)
+                <option>{{ $types->category}} </option>
+                @endforeach
+              </x-adminlte-select>
 
-          <div class="form-group">
-              <label for="specs">Specs:</label>
-              <input type="text" class="form-control" name="specs"/>
-          </div>
+              <x-adminlte-select name= "note_id" label = "Employee" class= "form-group">
+              @foreach ($notes as $note)
+                <option>{{ $notes->employee}} </option>
+                @endforeach
+              </x-adminlte-select>
+
+
+
+
+    
+
+
+              
+
+              
 
           <button type="submit" class="btn btn-primary">Add Equipment</button>
       </form>
