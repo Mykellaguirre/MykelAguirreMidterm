@@ -20,7 +20,7 @@
         <select class="select2" multiple="multiple" data-placeholder="Select a Technician" data- 
                   dropdown-css-class="select2-purple" style="width: 100%;">
           @foreach($manufacturers as $manufacturer)
-            <option value="{{ $manufacturer->id }}">{{ $manufacturer->name }}</option>
+            <option value="{{ $manufacturer->id }}">{{ $manufacturer->man_Name }}</option>
           @endforeach
         </select>
       </div>
