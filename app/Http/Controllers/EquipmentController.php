@@ -36,7 +36,7 @@ class EquipmentController extends Controller
              'name' => 'required',
              'invoice_id' => 'required',
              'type_id' => 'required',
-             'processor' => 'required',
+             #'processor' => 'required',
              'screen_size' => 'required',
              'battery' => 'required',
 
@@ -49,7 +49,7 @@ class EquipmentController extends Controller
              'name' => $request->name, 
              'invoice_id' => $request->invoice_id, 
              
-             'processor' => $request->processor,  
+             #'processor' => $request->processor,  
              'screen_size' => $request->screen_size,  
              'battery' => $request->battery,  
 
@@ -87,7 +87,7 @@ class EquipmentController extends Controller
             'name' => 'required',
             'invoice_id' => 'required',
             'type_category' => 'required',
-            'processor' => 'required',
+            #'processor' => 'required',
             'screen_size' => 'required',
 
             'battery' => 'required',
@@ -101,7 +101,7 @@ class EquipmentController extends Controller
         $equipment->name =  $request->get('name');
         $equipment->invoice_id =  $request->get('invoice_Num');
         $equipment->type_category =  $request->get('type_id');
-        $equipment->processor =  $request->get('processor');
+        #$equipment->processor =  $request->get('processor');
         $equipment->screen_size =  $request->get('screen_size');
 
         $equipment->battery =  $request->get('battery');

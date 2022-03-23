@@ -29,20 +29,9 @@
               <input type="text" class="form-control" name="invoice_id"/>
           </div>
 
-          <div class="form-group">    
-              <label for="processor">processor:*</label>
-              <input type="text" class="form-control" name="processor"/>
-          </div>
- 
-          <div class="form-group">
-              <label for="screen_size">Screen Size:*</label>
-              <input type="text" class="form-control" name="screen_size"/>
-          </div>
- 
-          <div class="form-group">
-              <label for="battery">Battery:</label>
-              <input type="text" class="form-control" name="battery"/>
-          </div>
+          
+        
+          
   
     
     
