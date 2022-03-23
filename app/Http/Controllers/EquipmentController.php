@@ -36,9 +36,9 @@ class EquipmentController extends Controller
              'name' => 'required',
              'invoice_id' => 'required',
              'type_id' => 'required',
-             #'processor' => 'required',
-             #'screen_size' => 'required',
-             #'battery' => 'required',
+             'processor' => 'required',
+             'screen_size' => 'required',
+             'battery' => 'required',
 
         ]);
 
@@ -48,13 +48,13 @@ class EquipmentController extends Controller
              'price' => $request->price,
              'name' => $request->name, 
              'invoice_id' => $request->invoice_id, 
-             'manufacturer_id' => $request->manufacturer_id,
+             'manufacturer_id' => $request->manufacturer_id
              'note_id' => $request->note_id,
              'type_id' => $request->type_id,
              
-             #'processor' => $request->processor,  
-             #'screen_size' => $request->screen_size,  
-             #'battery' => $request->battery,  
+             'processor' => $request->processor,  
+             'screen_size' => $request->screen_size,  
+             'battery' => $request->battery,  
 
 
         ]);
@@ -90,10 +90,10 @@ class EquipmentController extends Controller
             'name' => 'required',
             'invoice_id' => 'required',
             'type_id' => 'required',
-            #'processor' => 'required',
-            #'screen_size' => 'required',
+            'processor' => 'required',
+            'screen_size' => 'required',
 
-            #'battery' => 'required',
+            'battery' => 'required',
 
         ]); 
         $equipment = Equipment::find($id);
@@ -104,10 +104,10 @@ class EquipmentController extends Controller
         $equipment->name =  $request->get('name');
         $equipment->invoice_id =  $request->get('invoice_Num');
         $equipment->type_id =  $request->get('type_id');
-        #$equipment->processor =  $request->get('processor');
-        #$equipment->screen_size =  $request->get('screen_size');
+        $equipment->processor =  $request->get('processor');
+        $equipment->screen_size =  $request->get('screen_size');
 
-        #$equipment->battery =  $request->get('battery');
+        $equipment->battery =  $request->get('battery');
 
         
         $equipment->save();
