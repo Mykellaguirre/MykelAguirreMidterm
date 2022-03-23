@@ -21,8 +21,10 @@ return new class extends Migration
             $table->string('price');
             $table->string('name');
             $table->string('invoice_id');
-            $table->foreignId('type_category');
-            $table->string('specs');
+            $table->foreignId('type_id');
+            $table->string('processor');
+            $table->string('screen_size');
+            $table->string('battery');
             $table->timestamps();
         });
     }

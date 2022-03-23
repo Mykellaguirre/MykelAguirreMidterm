@@ -12,11 +12,7 @@
           <div class="row">    
               <x-adminlte-input name="name" label= "Name" class= "form-group"/>
 
-              <x-adminlte-select name= "manufacturer_id" label = "Manufacturer" class= "form-group">
-              @foreach ($manufacturers as $manufacturers)
-                <option value  ="{{ $manufacturer->id}}">{{ $manufacturer->man_Name}} </option>
-                @endforeach
-              </x-adminlte-select>
+              
 
               <x-adminlte-input name="price" label="Price" class= "form-group"/>
               <x-adminlte-input name="invoice_Num" label= "Invoice#" class= "form-group"/>

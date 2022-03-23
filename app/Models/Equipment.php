@@ -8,17 +8,17 @@ use Illuminate\Database\Eloquent\Model;
 class Equipment extends Model
 {
     use HasFactory;
-    protected $fillable = ['name','note_note','price','manufacturer_man_Name','type_category','invoice_Num','specs'];
+    protected $fillable = ['name','note_note','price','manufacturer_man_Name','type_category','invoice_Num','processor','screen_size','battery'];
     protected $table = "equipments";
 
     function manufacturer() {
-        return $this->belongsTo(Manufacturer::class,'man_Name');// manufacturer
+        return $this->belongsTo(Manufacturer::class);// manufacturer
     }
     function note() {
-        return $this->belongsTo(Note::class,'note'); //employee ID 
+        return $this->belongsTo(Note::class); //employee ID 
     }
     function type() {
-        return $this->belongsTo(Type::class,'category'); // category 
+        return $this->belongsTo(Type::class); // category 
     }
     
 }
