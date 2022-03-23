@@ -51,6 +51,8 @@
             <option value="{{ $note->id }}">{{ $note->employee }}</option>
           @endforeach
         </select>
+
+        <button type="submit" class="btn btn-primary">Add Equipment</button>
 </div>
 
 
