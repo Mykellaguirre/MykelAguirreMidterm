@@ -8,27 +8,14 @@
 
 @section('content')
 <div class="card">
-  <div class="card-body">
-    <table id="table" class="table table-bordered">
-      <thead>
-        <tr>
-        <th style="width: 10px">#</th><th>Name</th><th>Employee</th><th style="width: 10px">Price</th><th>Manufacturer</th><th>Category</th><th style="width: 10px">Invoice</th><th>Specs</th>
-      </tr>
-        
-        
-      </thead>
-      <tbody>
-       
-        @foreach($equipments AS $equipment)
-        <tr>
-          <th>{{ $equipment->id }}</th> <br>
-          <th>{{ $equipment->name }}</th> <br>
-          <th>{{ $equipment->note_note}}</th> <br>
-          <th>{{ $equipment->price }}</th> <br>
-          <th>{{ $equipment->manufacturer_man_Name }}</th> <br>
-          <th>{{ $equipment->type_category }}</th> <br>
-          <th>{{ $equipment->invoice_Num }}</th> <br>
-          <th>{{ $equipment->specs }}</th> 
+  <div class="col-md-12">
+      <div class = "card card-default">
+</div>
+            <div class="card-body">
+              Equipment
+              @foreach($equipments AS $equipment)
+              <tr>
+              <th>{{ $equipment->name }}</th> <br>
 
           
           <td><a class="btn btn-default btn-sm" href="{{ route('equipments.show',['equipment'=>$equipment->id]) }}">View</a></td>
