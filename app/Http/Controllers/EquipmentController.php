@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Equipment;
+use App\Models\Manufacturer;
+use App\Models\Note;
+use App\Models\Type;
 
 class EquipmentController extends Controller
 {
@@ -17,30 +20,39 @@ class EquipmentController extends Controller
 
     public function create()
     {
-        return view('equipments.create');
+        $manufacturers=Manufacturer::all();
+        $notes = Note::all();
+        $types = Type::all();
+        return view('equipments.create',compact('manufacturers','notes','types'));
     }
 
 
     public function store(Request $request)
     {
         $validated = $request->validate([
-             'manufacturer_man_Name' => 'required',
-             'note_note' => 'required',
+             'manufacturer_id' => 'required',
+             'note_id' => 'required',
              'price' => 'required',
              'name' => 'required',
              'invoice_Num' => 'required',
-             'type_category' => 'required',
-             'specs' => 'required',
+             'type_id' => 'required',
+             'processor' => 'required',
+             'screen_size' => 'required',
+             'battery' => 'required',
+
         ]);
 
         $equipment = Equipment::create([ 
-             'manufacturer_man_Name' => $request->manufacturer_id, 
-             'note_note' => $request->note_id, 
+             'manufacturer_id' => $request->manufacturer_id, 
+             'note_id' => $request->note_id, 
              'price' => $request->price,
              'name' => $request->name, 
              'invoice_Num' => $request->invoice_Num, 
-             'type_category' => $request->type_id, 
-             'specs' => $request->specs,  
+             'type_id' => $request->type_id, 
+             'processor' => $request->processor,  
+             'screen_size' => $request->screen_size,  
+             'battery' => $request->battery,  
+
 
         ]);
 
@@ -57,6 +69,9 @@ class EquipmentController extends Controller
     public function edit($id)
     {
         $equipment = Equipment::find($id);
+        $manufacturers=Manufacturer::all();
+        $notes = Note::all();
+        $types = Type::all();
 
         return view('equipments.edit')->with('equipment',$equipment);
         //
@@ -72,17 +87,25 @@ class EquipmentController extends Controller
             'name' => 'required',
             'invoice_Num' => 'required',
             'type_category' => 'required',
-            'specs' => 'required',
+            'processor' => 'required',
+            'screen_size' => 'required',
+
+            'battery' => 'required',
+
         ]); 
         $equipment = Equipment::find($id);
         // Getting values from the blade template form
-        $equipment->manufacturer_man_Name =  $request->get('manufacturer_man_Name');
-        $equipment->note_note = $request->get('note_note');
+        $equipment->manufacturer_man_Name =  $request->get('manufacturer_id');
+        $equipment->note_note = $request->get('note_id');
         $equipment->price = $request->get('price');
         $equipment->name =  $request->get('name');
         $equipment->invoice_Num =  $request->get('invoice_Num');
-        $equipment->type_category =  $request->get('type_category');
-        $equipment->specs =  $request->get('specs');
+        $equipment->type_category =  $request->get('type_id');
+        $equipment->processor =  $request->get('processor');
+        $equipment->screen_size =  $request->get('screen_size');
+
+        $equipment->battery =  $request->get('battery');
+
         
         $equipment->save();
  
