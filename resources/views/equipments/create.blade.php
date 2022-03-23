@@ -25,8 +25,8 @@
           </div>
  
           <div class="form-group">
-              <label for="invoice_Num">Invoice#:</label>
-              <input type="text" class="form-control" name="invoice_Num"/>
+              <label for="invoice_id">Invoice#:</label>
+              <input type="text" class="form-control" name="invoice_id"/>
           </div>
 
           <div class="form-group">    

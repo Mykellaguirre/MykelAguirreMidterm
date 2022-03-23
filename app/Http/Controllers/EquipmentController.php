@@ -34,7 +34,7 @@ class EquipmentController extends Controller
              'note_id' => 'required',
              'price' => 'required',
              'name' => 'required',
-             'invoice_Num' => 'required',
+             'invoice_id' => 'required',
              'type_id' => 'required',
              'processor' => 'required',
              'screen_size' => 'required',
@@ -47,7 +47,7 @@ class EquipmentController extends Controller
              'note_id' => $request->note_id, 
              'price' => $request->price,
              'name' => $request->name, 
-             'invoice_Num' => $request->invoice_Num, 
+             'invoice_id' => $request->invoice_Num, 
              'type_id' => $request->type_id, 
              'processor' => $request->processor,  
              'screen_size' => $request->screen_size,  
@@ -85,7 +85,7 @@ class EquipmentController extends Controller
             'note_note' => 'required',
             'price' => 'required',
             'name' => 'required',
-            'invoice_Num' => 'required',
+            'invoice_id' => 'required',
             'type_category' => 'required',
             'processor' => 'required',
             'screen_size' => 'required',
@@ -99,7 +99,7 @@ class EquipmentController extends Controller
         $equipment->note_note = $request->get('note_id');
         $equipment->price = $request->get('price');
         $equipment->name =  $request->get('name');
-        $equipment->invoice_Num =  $request->get('invoice_Num');
+        $equipment->invoice_id =  $request->get('invoice_Num');
         $equipment->type_category =  $request->get('type_id');
         $equipment->processor =  $request->get('processor');
         $equipment->screen_size =  $request->get('screen_size');
