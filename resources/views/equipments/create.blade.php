@@ -14,7 +14,7 @@
 
               <x-adminlte-select name= "manufacturer_id" label = "Manufacturer" class= "form-group">
               @foreach ($manufacturers as $manufacturers)
-                <option>{{ $manufacturers->man_Name}} </option>
+                <option value  ="{{ $manufacturer->id}}">{{ $manufacturer->man_Name}} </option>
                 @endforeach
               </x-adminlte-select>
 
@@ -26,13 +26,13 @@
 
               <x-adminlte-select name= "type_id" label = "Category" class= "form-group">
               @foreach ($types as $type)
-                <option>{{ $types->category}} </option>
+                <option value  ="{{ $type->id}}">{{ $type->category}} </option>
                 @endforeach
               </x-adminlte-select>
 
               <x-adminlte-select name= "note_id" label = "Employee" class= "form-group">
               @foreach ($notes as $note)
-                <option>{{ $notes->employee}} </option>
+                <option value  ="{{ $note->id}}">{{ $note->employee}} </option>
                 @endforeach
               </x-adminlte-select>
 
