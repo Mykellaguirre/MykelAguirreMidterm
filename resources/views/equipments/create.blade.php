@@ -14,7 +14,35 @@
 <form method="post" action="{{ route('equipments.store') }}">
           @csrf
 
-          <input for="name" >Equipment Name</label>
+          <div class="form-group">    
+              <label for="name">Name:*</label>
+              <input type="text" class="form-control" name="name"/>
+          </div>
+ 
+          <div class="form-group">
+              <label for="price">Price:*</label>
+              <input type="text" class="form-control" name="price"/>
+          </div>
+ 
+          <div class="form-group">
+              <label for="invoice_Num">Invoice#:</label>
+              <input type="text" class="form-control" name="invoice_Num"/>
+          </div>
+
+          <div class="form-group">    
+              <label for="processor">processor:*</label>
+              <input type="text" class="form-control" name="processor"/>
+          </div>
+ 
+          <div class="form-group">
+              <label for="screen_size">Screen Size:*</label>
+              <input type="text" class="form-control" name="screen_size"/>
+          </div>
+ 
+          <div class="form-group">
+              <label for="battery">Battery:</label>
+              <input type="text" class="form-control" name="battery"/>
+          </div>
   
     
     
@@ -46,7 +74,7 @@
     <div class="form-group">
         <label>User</label>
       <div class="select2-purple">
-        <select name = "note_id" label = "User">
+        <select name = "note_id" label = "Employee">
           @foreach($notes as $note)
             <option value="{{ $note->id }}">{{ $note->employee }}</option>
           @endforeach
