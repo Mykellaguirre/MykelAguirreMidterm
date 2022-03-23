@@ -36,6 +36,9 @@
                 @endforeach
               </x-adminlte-select>
 
+              <button type="submit" class="btn btn-primary">Add Equipment</button>
+</form>
+
 
 
 
@@ -46,8 +49,8 @@
 
               
 
-          <button type="submit" class="btn btn-primary">Add Equipment</button>
-      </form>
+        
+     
   </div>
 </div>
 </div>
