@@ -48,7 +48,7 @@ class EquipmentController extends Controller
              'price' => $request->price,
              'name' => $request->name, 
              'invoice_id' => $request->invoice_id, 
-             'manufacturer_id' => $request->manufacturer_id
+             'manufacturer_id' => $request->manufacturer_id,
              'note_id' => $request->note_id,
              'type_id' => $request->type_id,
              
