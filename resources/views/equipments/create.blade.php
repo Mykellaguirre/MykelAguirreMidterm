@@ -7,32 +7,25 @@
 @stop
 
 @section('content')
+<div class="card">
+  <div class="col-md-12">
+      <div class = "card card-default">
+</div>
 <form method="post" action="{{ route('equipments.store') }}">
           @csrf
-          <div class="row">    
-              <x-adminlte-input name="name" label= "Name" class= "form-group"/>
-
-              
-
-              <x-adminlte-input name="price" label="Price" class= "form-group"/>
-              <x-adminlte-input name="invoice_Num" label= "Invoice#" class= "form-group"/>
-              <x-adminlte-input name="processor" label= "Processor" class= "form-group"/>
-              <x-adminlte-input name="screen_Size" label= "Screen Size" class= "form-group"/>
-              <x-adminlte-input name="battery" label= "Battery Life" class= "form-group"/>
-
-              <x-adminlte-select name= "type_id" label = "Category" class= "form-group">
-              @foreach ($types as $type)
-                <option value  ="{{ $type->id}}">{{ $type->category}} </option>
-                @endforeach
-              </x-adminlte-select>
-
-              <x-adminlte-select name= "note_id" label = "Employee" class= "form-group">
-              @foreach ($notes as $note)
-                <option value  ="{{ $note->id}}">{{ $note->employee}} </option>
-                @endforeach
-              </x-adminlte-select>
-
-              <button type="submit" class="btn btn-primary">Add Equipment</button>
+          <div class="col-md">
+    <div class="form-group">
+      <label>Manufacturer</label>
+      <div class="select2-purple">
+        <select class="select2" multiple="multiple" data-placeholder="Select a Technician" data- 
+                  dropdown-css-class="select2-purple" style="width: 100%;">
+          @foreach($manufacturers as $manufacturer)
+            <option value="{{ $manufacturer->id }}">{{ $manufacturer->name }}</option>
+          @endforeach
+        </select>
+      </div>
+    </div>
+</div>
 </form>
 
 
