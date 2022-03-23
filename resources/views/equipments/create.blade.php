@@ -17,8 +17,7 @@
     <div class="form-group">
       <label>Manufacturer</label>
       <div class="select2-purple">
-        <select class="select2" multiple="multiple" data-placeholder="Select a Technician" data- 
-                  dropdown-css-class="select2-purple" style="width: 100%;">
+        <select name = "manufacturer_id" label = "Manufacturer">
           @foreach($manufacturers as $manufacturer)
             <option value="{{ $manufacturer->id }}">{{ $manufacturer->man_Name }}</option>
           @endforeach
