@@ -43,12 +43,12 @@ class EquipmentController extends Controller
         ]);
 
         $equipment = Equipment::create([ 
-             'manufacturer_id' => $request->manufacturer_id, 
-             'note_id' => $request->note_id, 
+           
+           
              'price' => $request->price,
              'name' => $request->name, 
-             'invoice_id' => $request->invoice_Num, 
-             'type_id' => $request->type_id, 
+             'invoice_id' => $request->invoice_id, 
+             
              'processor' => $request->processor,  
              'screen_size' => $request->screen_size,  
              'battery' => $request->battery,  
@@ -56,7 +56,7 @@ class EquipmentController extends Controller
 
         ]);
 
-        return $this->index();
+        return view ('equipments.show',compact('equipment'));
     }
 
     public function show($id)
