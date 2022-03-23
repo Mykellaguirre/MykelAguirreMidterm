@@ -17,7 +17,7 @@
     <div class="form-group">
     
     
-    <x-adminlte-input name="name" label= "Name" class= "form-group"/>
+   
 
 
 
@@ -30,6 +30,8 @@
           @endforeach
         </select>
 
+   <div class="col-md">
+    <div class="form-group">
         <label>Category</label>
       <div class="select2-purple">
         <select name = "type_id" label = "Category">
@@ -38,6 +40,8 @@
           @endforeach
         </select>
 
+        <div class="col-md">
+    <div class="form-group">
         <label>User</label>
       <div class="select2-purple">
         <select name = "note_id" label = "User">
