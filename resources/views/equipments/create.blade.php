@@ -15,6 +15,13 @@
           @csrf
           <div class="col-md">
     <div class="form-group">
+    
+    
+    <x-adminlte-input name="name" label= "Name" class= "form-group"/>
+
+
+
+
       <label>Manufacturer</label>
       <div class="select2-purple">
         <select name = "manufacturer_id" label = "Manufacturer">
@@ -22,6 +29,24 @@
             <option value="{{ $manufacturer->id }}">{{ $manufacturer->man_Name }}</option>
           @endforeach
         </select>
+
+        <label>Category</label>
+      <div class="select2-purple">
+        <select name = "type_id" label = "Category">
+          @foreach($types as $type)
+            <option value="{{ $type->id }}">{{ $type->category }}</option>
+          @endforeach
+        </select>
+
+        <label>User</label>
+      <div class="select2-purple">
+        <select name = "note_id" label = "User">
+          @foreach($notes as $note)
+            <option value="{{ $note->id }}">{{ $note->employee }}</option>
+          @endforeach
+        </select>
+
+
       </div>
     </div>
 </div>
