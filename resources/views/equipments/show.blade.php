@@ -11,15 +11,15 @@
    <div class = "col-md-12">
      <div class="card card-primary">
        <div class = "card-body">
-         <b>Name</b> {|| $equipment->name;||} |
-          <b>Manufacturer</b> {|| $equipment->manufacturer->man_Name||} |
-            <b>Price</b> $equipment->price} |
-            <b>Category</b>  $equipment->type->category} |
-            <b>Processor</b>  $equipment->processor} |
-            <b>Screen Size</b> $equipment->screen_size}|
-            <b>Battery Life</b>  $equipment->battery} |
-            <b>Invoice#</b> $equipment->invoice_id } |
-            <b>User</b>  $equipment->note->employee} |
+         <b>Name</b> {{ $equipment->name}} |
+          <b>Manufacturer</b> {{ $equipment->manufacturer->man_Name}} |
+            <b>Price</b> {{$equipment->price}} |
+            <b>Category</b>  {{$equipment->type->category}} |
+            <b>Processor</b>  {{$equipment->processor}} |
+            <b>Screen Size</b> {{$equipment->screen_size}}|
+            <b>Battery Life</b>  {{$equipment->battery}} |
+            <b>Invoice#</b> {{$equipment->invoice_id }} |
+            <b>User</b>  {{$equipment->note->employee}} |
 
  
   
