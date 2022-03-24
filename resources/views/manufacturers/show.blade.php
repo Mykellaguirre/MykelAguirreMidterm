@@ -18,9 +18,7 @@
             <b>Sales Info</b>  {{$manufacturer->sales_Info}} |
             <b>Tech Support Info</b>  {{$manufacturer->tech_Support}} |
 
-            @foreach($equipments as $equipment)
-            <option value="{{ $equipment->id }}">{{ $manufacturer->equipment->name }}</option>
-          @endforeach
+         
 
 
 
