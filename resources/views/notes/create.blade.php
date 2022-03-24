@@ -13,6 +13,10 @@
               <label for="note">Employee:*</label>
               <input type="text" class="form-control" name="note"/>
           </div>
+          <div class="form-group">    
+              <label for="contact">Contact Info*</label>
+              <input type="text" class="form-control" name="contact"/>
+          </div>
  
        
           <button type="submit" class="btn btn-primary">Add employee</button>

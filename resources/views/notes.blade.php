@@ -12,7 +12,7 @@
     <table id="table" class="table table-bordered">
       <thead>
         <tr>
-          <th style="width: 10px">#</th><th>Employee</th><th style="width: 40px">
+          <th style="width: 10px">#</th><th>Employee</th><th>Contact Info</th><th style="width: 40px">
         </tr>
       </thead>
       <tbody>
@@ -22,6 +22,8 @@
         <tr>
           <td>{{ $note->id }}</td>
           <td>{{ $note->note }}</td>
+          <td>{{ $note->contact }}</td>
+
           
           <td><a class="btn btn-default btn-sm" href="{{ route('notes.show',['note'=>$note->id]) }}">View</a></td>
           <td><a href="{{ route('notes.edit',$note->id)}}" class="btn btn-primary">Edit</a></td>

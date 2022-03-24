@@ -25,11 +25,15 @@ class NoteController extends Controller
     {
         $validated = $request->validate([
              'note' => 'required',
+             'contact' => 'required',
+
              
         ]);
 
         $note = Note::create([ 
              'note' => $request->note, 
+             'contact' => $request->contact, 
+
          
         ]);
 
@@ -56,11 +60,15 @@ class NoteController extends Controller
     {
         $request->validate([
             'note'=>'required',
+            'contact'=>'required',
+
            
         ]); 
         $note = Note::find($id);
         // Getting values from the blade template form
         $note->note =  $request->get('note');
+        $note->contact =  $request->get('contact');
+
        
         $note->save();
  

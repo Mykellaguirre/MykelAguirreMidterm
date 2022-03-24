@@ -7,6 +7,17 @@
 @stop
 
 @section('content')
-  <h2>{{ $note->note; }}</h2>
+
+<div class = "row">
+   <div class = "col-md-12">
+     <div class="card card-primary">
+       <div class = "card-body">
+
+    
+            <b>Employee</b> {{$note->note}}|
+            <b>Contact Info</b>  {{$note->contact}} |
+
+
+
   
 @stop
