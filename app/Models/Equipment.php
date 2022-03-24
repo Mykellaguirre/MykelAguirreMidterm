@@ -13,6 +13,8 @@ class Equipment extends Model
 
     function manufacturer() {
         return $this->belongsTo(Manufacturer::class);// manufacturer
+        return $this->hasMany(Manufacturer::class);
+
     }
     function note() {
         return $this->belongsTo(Note::class); //employee ID 
@@ -20,5 +22,7 @@ class Equipment extends Model
     function type() {
         return $this->belongsTo(Type::class); // category 
     }
+   
+
     
 }

@@ -12,6 +12,8 @@ class Manufacturer extends Model
     public function equipment()
     {
         return $this->hasMany(Equipment::class);
+        return $this->belongsTo(Equipment::class);// manufacturer
+
     }
 
 
