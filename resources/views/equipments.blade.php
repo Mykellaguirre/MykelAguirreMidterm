@@ -18,9 +18,9 @@
               <th>{{ $equipment->name }}</th> <br>
 
           
-          <td><a class="btn btn-default btn-sm" href="{{ route('equipments.show',['equipment'=>$equipment->id]) }}">View</a></td>
+          <td><a class="btn btn-default btn-sm" href="{{ route('equipments.show',['equipment'=>$equipment->id]) }}">View</a><td>
             <!-- Edit -->
-            <td><a href="{{ route('equipments.edit',$equipment->id)}}" class="btn btn-primary">Edit</a></td>
+            <td><a href="{{ route('equipments.edit',$equipment->id)}}" class="btn btn-primary">Edit</a><td>
             <td>
                 <form action="{{ route('equipments.destroy', $equipment->id)}}" method="post">
                   @csrf
