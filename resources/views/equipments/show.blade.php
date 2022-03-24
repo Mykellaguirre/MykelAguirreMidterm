@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Equipment')
+@section('title', '{{$equipment->name}}')
 
 @section('content_header')
     <h1>Equipment</h1>
@@ -11,8 +11,11 @@
    <div class = "col-md-12">
      <div class="card card-primary">
        <div class = "card-body">
+         
+
+
          <b>Name</b> {{ $equipment->name}} |
-          <b>Manufacturer</b> {{ $equipment->manufacturer->man_Name}} |
+          <b>Manufacturer</b> <a href="manufacturers.show">{{$equipment->manufacturer->man_Name}}</a>
             <b>Price</b> {{$equipment->price}} |
             <b>Category</b>  {{$equipment->type->category}} |
             <b>Processor</b>  {{$equipment->processor}} |
