@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Manufacturer;
+use App\Models\Equipment;
+
 
 class ManufacturerController extends Controller
 {
@@ -41,6 +43,7 @@ class ManufacturerController extends Controller
 
     public function show($id)
     {
+        $equipments = Equipment::all();
         $manufacturer= Manufacturer::find($id); 
         return view('manufacturers.show',compact('manufacturer'));
     }
