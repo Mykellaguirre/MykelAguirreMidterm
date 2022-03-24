@@ -15,7 +15,7 @@
 
 
          <b>Name</b> {{ $equipment->name}} |
-          <b>Manufacturer</b> <a href="{{ route('manufacturers.show',['manufacturer'=>$manufacturer->id]) }}"    >   {{$equipment->manufacturer->man_Name}}</a>
+          <b>Manufacturer</b> <a href="{{ route('manufacturers.show',['manufacturer'=>$equipment->manufacturer->id]) }}"    >   {{$equipment->manufacturer->man_Name}}</a>
             <b>Price</b> {{$equipment->price}} |
             <b>Category</b>  {{$equipment->type->category}} |
             <b>Processor</b>  {{$equipment->processor}} |
