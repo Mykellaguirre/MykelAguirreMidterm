@@ -12,7 +12,7 @@
       <div class = "card card-default">
 </div>
             <div class="card-body">
-              Equipment
+           
               @foreach($equipments AS $equipment)
               <tr>
               <th>{{ $equipment->name }}</th> <br>
@@ -26,6 +26,7 @@
                   @csrf
                   @method('DELETE')
                   <button class="btn btn-danger" type="submit">Delete</button>
+                  <td>
                   </form>
         </tr>
         @endforeach
