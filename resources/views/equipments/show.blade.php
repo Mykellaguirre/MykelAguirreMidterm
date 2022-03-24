@@ -22,7 +22,7 @@
             <b>Screen Size</b> {{$equipment->screen_size}}|
             <b>Battery Life</b>  {{$equipment->battery}} |
             <b>Invoice#</b> {{$equipment->invoice_id }} |
-            <b>User</b>  <a href="{{ route('notes.show',['note'=>$equipment->note->id]) }}">{{$equipment->note->employee}} |</a>
+            <b>User</b>  <a href="{{ route('notes.show',['note'=>$equipment->note->id]) }}">{{$equipment->note->employee}} Employee That Purchased </a>
 
  
   
