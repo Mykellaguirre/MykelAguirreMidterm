@@ -20,7 +20,7 @@
 
 
             Equipment List 
-            <b>Name</b> {{ $manufacturer->equipment->name}}
+            <b>Name</b> {{ $manufacturer->equipment}}
        
 
            
