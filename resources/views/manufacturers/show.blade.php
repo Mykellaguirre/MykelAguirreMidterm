@@ -18,7 +18,12 @@
             <b>Sales Info</b>  {{$manufacturer->sales_Info}} |
             <b>Tech Support Info</b>  {{$manufacturer->tech_Support}} |
 
-            <b>Equipment</b>  {{$manufacturer->equipment->name}} |
+
+            <select name = "equipment_id" label = "Equipment">
+          @foreach($equipments as $equipment)
+            <option value="{{ $equipment->id }}">{{ $equipment->name }}</option>
+          @endforeach
+        </select>
 
            
 
