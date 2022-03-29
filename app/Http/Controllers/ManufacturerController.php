@@ -43,7 +43,7 @@ class ManufacturerController extends Controller
 
     public function show($id)
     {
-        $equipments = Equipment::find($id);
+        $equipments = Equipment::all();
         $manufacturer= Manufacturer::find($id); 
         return view('manufacturers.show',compact('manufacturer'));
     }
