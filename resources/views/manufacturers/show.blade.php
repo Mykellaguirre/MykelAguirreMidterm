@@ -21,7 +21,7 @@
 
             Equipment List 
 
-            @foreach($manufacturer->equipment AS equip)
+            @foreach($manufacturer->equipment AS $equip)
             <li> $equip->name </li>
             @endforeach
 
