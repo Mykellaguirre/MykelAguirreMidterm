@@ -8,5 +8,9 @@
 
 @section('content')
   <h2>{{ $type->category; }}</h2>
+
+  @foreach($type->equipment AS $equip)
+            <li> {{$equip->name}} </li>
+            @endforeach
   
 @stop

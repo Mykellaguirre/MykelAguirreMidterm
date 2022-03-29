@@ -17,6 +17,10 @@
             <b>Employee</b> {{$note->note}}|
             <b>Contact Info</b>  {{$note->contact}} |
 
+            @foreach($note->equipment AS $equip)
+            <li> {{$equip->name}} </li>
+            @endforeach
+
 
 
   

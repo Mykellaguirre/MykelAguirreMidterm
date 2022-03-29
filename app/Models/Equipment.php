@@ -17,10 +17,12 @@ class Equipment extends Model
 
     }
     function note() {
-        return $this->belongsTo(Note::class); //employee ID 
+        return $this->belongsTo(Note::class);
+        return $this->hasMany(Note::class); //employee ID 
     }
     function type() {
-        return $this->belongsTo(Type::class); // category 
+        return $this->belongsTo(Type::class);
+        return $this->hasMany(Type::class); // category 
     }
    
 
