@@ -19,11 +19,11 @@
             <b>Tech Support Info</b>  {{$manufacturer->tech_Support}} |
 
 
-            <select name = "equipment_id" label = "Equipment">
+            Equipment List 
           @foreach($manufacturer->equipments as $equipment)
-            <option value="{{ $equipment->id }}">{{ $equipment->name }}</option>
+            <li>"{{ $equipment->id }}">{{ $equipment->name }}</li>
           @endforeach
-        </select>
+       
 
            
 
