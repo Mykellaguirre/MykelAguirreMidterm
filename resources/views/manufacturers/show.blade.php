@@ -18,6 +18,13 @@
             <b>Sales Info</b>  {{$manufacturer->sales_Info}} |
             <b>Tech Support Info</b>  {{$manufacturer->tech_Support}} |
 
+            @foreach($equipments AS $equipment)
+              <tr>
+              <th>{{ $equipment->name }}</th> <br>
+
+
+
+
             
 
 

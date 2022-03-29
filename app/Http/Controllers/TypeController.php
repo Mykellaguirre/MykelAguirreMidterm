@@ -39,6 +39,7 @@ class TypeController extends Controller
     public function show($id)
     {
         $type= Type::find($id); 
+        $equipments = Equipment::all();
         return view('types.show',compact('type'));
     }
 
