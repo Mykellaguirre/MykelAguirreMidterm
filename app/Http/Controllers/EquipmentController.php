@@ -64,19 +64,19 @@ class EquipmentController extends Controller
 
     public function show($id)
     {
-        $equipment= Equipment::find($id); 
+        $equipments= Equipment::find($id); 
         return view('equipments.show',compact('equipment'));
     }
 
 
     public function edit($id)
     {
-        $equipment = Equipment::find($id);
+        $equipments = Equipment::find($id);
         $manufacturers=Manufacturer::all();
         $notes = Note::all();
         $types = Type::all();
 
-        return view('equipments.edit')->with('equipment',$equipment);
+        return view('equipments.edit')->with('equipment','manufacturers','notes','types',$equipments);
         //
     }
 
