@@ -23,6 +23,7 @@
 
             @foreach($manufacturer->equipment AS equip)
             <li> $equip->name </li>
+            @endforeach
 
             <b>Name</b> {{ $manufacturer->equipment}}
        
