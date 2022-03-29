@@ -97,6 +97,9 @@ class EquipmentController extends Controller
 
         ]); 
         $equipment = Equipment::find($id);
+        $manufacturers=Manufacturer::all();
+        $notes = Note::all();
+        $types = Type::all();
         // Getting values from the blade template form
         $equipment->manufacturer_id =  $request->get('manufacturer_id');
         $equipment->note_id = $request->get('note_id');
