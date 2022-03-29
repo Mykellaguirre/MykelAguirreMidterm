@@ -59,7 +59,7 @@ class EquipmentController extends Controller
 
         ]);
 
-        return view ('equipments.show',compact('equipment'));
+        return view ('equipments.show',compact('equipment','manufacturers','notes','types'));
     }
 
     public function show($id)
