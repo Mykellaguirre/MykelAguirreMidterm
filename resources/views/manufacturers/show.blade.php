@@ -20,7 +20,7 @@
 
 
             <select name = "equipment_id" label = "Equipment">
-          @foreach($equipments as $equipment)
+          @foreach($manufacturer->equipments as $equipment)
             <option value="{{ $equipment->id }}">{{ $equipment->name }}</option>
           @endforeach
         </select>
