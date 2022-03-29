@@ -83,6 +83,9 @@ class EquipmentController extends Controller
 
     public function update(Request $request, $id)
     {
+        $manufacturers=Manufacturer::all();
+        $notes = Note::all();
+        $types = Type::all();
         $request->validate([
             'manufacturer_id' => 'required',
             'note_id' => 'required',
