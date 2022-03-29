@@ -59,24 +59,24 @@ class EquipmentController extends Controller
 
         ]);
 
-        return view ('equipments.show',compact('equipment','manufacturers','notes','types'));
+        return view ('equipments.show',compact('equipment'));
     }
 
     public function show($id)
     {
-        $equipments= Equipment::find($id); 
+        $equipment= Equipment::find($id); 
         return view('equipments.show',compact('equipment'));
     }
 
 
     public function edit($id)
     {
-        $equipments = Equipment::find($id);
+        $equipment = Equipment::find($id);
         $manufacturers=Manufacturer::all();
         $notes = Note::all();
         $types = Type::all();
 
-        return view('equipments.edit')->with('equipment','manufacturers','notes','types',$equipments);
+        return view('equipments.edit')->with('equipment',$equipment);
         //
     }
 
@@ -87,6 +87,7 @@ class EquipmentController extends Controller
         $notes = Note::all();
         $types = Type::all();
         $request->validate([
+            
             'manufacturer_id' => 'required',
             'note_id' => 'required',
             'price' => 'required',
@@ -104,6 +105,7 @@ class EquipmentController extends Controller
         $notes = Note::all();
         $types = Type::all();
         // Getting values from the blade template form
+        
         $equipment->manufacturer_id =  $request->get('manufacturer_id');
         $equipment->note_id = $request->get('note_id');
         $equipment->price = $request->get('price');
